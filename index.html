@@ -23,6 +23,14 @@
       <span class="code-pink">const skills = ["Java", "JS", "Web", "Android"];</span>
       <span class="code-orange">for (let idea of ideas) &#123; build(idea); &#125;</span>
       <span class="code-cyan">// Siempre aprendiendo y mejorando 🚀</span>
+      <span class="code-purple">let proyectos = ["Calculadora RM", "Gestor Pedidos"];</span>
+      <span class="code-yellow">skills.forEach(s =&gt; learn(s));</span>
+      <span class="code-blue">const coffee = true;</span>
+      <span class="code-green">while (motivation) &#123; keepCoding(); &#125;</span>
+      <span class="code-pink">const github = "github.com/iivaann18";</span>
+      <span class="code-orange">const linkedin = "linkedin.com/in/ivan-perez-dev";</span>
+      <span class="code-cyan">// Portfolio hecho con amor y café ☕</span>
+      <span class="code-purple">export default function IvanPortfolio() &#123; ... &#125;</span>
     </div>
     <button id="toggle-dark" title="Cambiar modo">🌙</button>
     <div class="lang-dropdown">
@@ -34,9 +42,11 @@
       </ul>
     </div>
     <div class="contenedor">
+      <!-- Avatar profesional -->
+      <img src="avatar.jpg" alt="Foto de Iván" class="avatar-header" width="110" height="110" style="margin-bottom:18px;">
       <h1 data-i18n="headerName">Iván</h1>
       <p data-i18n="headerSubtitle">Desarrollador de Software y Web</p>
-      <nav>
+      <nav class="nav-sticky">
         <ul>
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
@@ -139,27 +149,27 @@
     <section id="metodologias" class="contenedor">
       <h2>Metodologías</h2>
       <div class="scrum-diagram">
-        <div class="scrum-circle scrum-product">
+        <div class="scrum-circle scrum-product" title="Lista priorizada de requisitos del producto">
           <span class="iconify" data-icon="mdi:lightbulb-on-outline" data-width="32"></span>
           <div>Product Backlog</div>
         </div>
         <div class="scrum-arrow"></div>
-        <div class="scrum-circle scrum-sprint">
+        <div class="scrum-circle scrum-sprint" title="Iteración de trabajo de duración fija">
           <span class="iconify" data-icon="mdi:run-fast" data-width="32"></span>
           <div>Sprint</div>
         </div>
         <div class="scrum-arrow"></div>
-        <div class="scrum-circle scrum-board">
+        <div class="scrum-circle scrum-board" title="Tareas seleccionadas para el Sprint">
           <span class="iconify" data-icon="mdi:clipboard-list-outline" data-width="32"></span>
           <div>Sprint Backlog</div>
         </div>
         <div class="scrum-arrow"></div>
-        <div class="scrum-circle scrum-daily">
+        <div class="scrum-circle scrum-daily" title="Reunión diaria de sincronización del equipo">
           <span class="iconify" data-icon="mdi:account-group-outline" data-width="32"></span>
           <div>Daily Scrum</div>
         </div>
         <div class="scrum-arrow"></div>
-        <div class="scrum-circle scrum-increment">
+        <div class="scrum-circle scrum-increment" title="Resultado entregable y funcional al final del Sprint">
           <span class="iconify" data-icon="mdi:rocket-launch-outline" data-width="32"></span>
           <div>Increment</div>
         </div>
@@ -199,12 +209,21 @@
   <footer>
     <div class="contenedor">
       <p>&copy; 2025 Iván - Todos los derechos reservados</p>
-      <div style="margin-top:10px;">
+      <div style="margin-top:10px; display: flex; gap: 18px; justify-content: center;">
         <a href="https://github.com/iivaann18" target="_blank" rel="noopener" aria-label="GitHub" style="color:inherit;text-decoration:none;font-size:2rem;">
           <svg height="1.5em" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-...."/>
           </svg>
         </a>
+        <a href="https://www.linkedin.com/in/ivan-perez-dev/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:inherit;text-decoration:none;font-size:2rem;">
+          <span class="iconify" data-icon="mdi:linkedin" data-width="32"></span>
+        </a>
+        <a href="https://instagram.com/ivan.dev" target="_blank" rel="noopener" aria-label="Instagram" style="color:inherit;text-decoration:none;font-size:2rem;">
+          <span class="iconify" data-icon="mdi:instagram" data-width="32"></span>
+        </a>
+      </div>
+      <div style="margin-top:12px; font-size:1.05rem; opacity:0.8;">
+        Hecho con <span style="color:#e040fb;">&#10084;&#65039;</span> y café ☕
       </div>
     </div>
   </footer>
