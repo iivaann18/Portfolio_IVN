@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeNull | Desarrollador de Software y Web</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.1/css/flag-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script defer src="script.js"></script>
+  <!-- Añade Iconify para los iconos -->
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="code-ambient">
+      <span class="code-purple">&lt;!-- { code: "ambient" } --&gt;</span>
+      <span class="code-yellow">function dev() &#123; ... &#125;</span>
+      <span class="code-blue">console.log("Bienvenido a mi portafolio!");</span>
+      <span class="code-green">if (passion &gt; 9000) &#123; code(); &#125;</span>
+      <span class="code-pink">const skills = ["Java", "JS", "Web", "Android"];</span>
+      <span class="code-orange">for (let idea of ideas) &#123; build(idea); &#125;</span>
+      <span class="code-cyan">// Siempre aprendiendo y mejorando 🚀</span>
+    </div>
+    <button id="toggle-dark" title="Cambiar modo">🌙</button>
+    <div class="lang-dropdown">
+      <button id="lang-btn" aria-label="Cambiar idioma"><span class="fi fi-es"></span></button>
+      <ul id="lang-list" class="lang-list" style="display:none;">
+        <li data-lang="es"><span class="fi fi-es"></span></li>
+        <li data-lang="en"><span class="fi fi-gb"></span></li>
+        <li data-lang="de"><span class="fi fi-de"></span></li>
+      </ul>
+    </div>
+    <div class="contenedor">
+      <h1 data-i18n="headerName">Iván</h1>
+      <p data-i18n="headerSubtitle">Desarrollador de Software y Web</p>
+      <nav>
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#tecnologias">Tecnologías</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre-mi" class="contenedor">
+      <h2 data-i18n="aboutTitle">Sobre mí</h2>
+      <p data-i18n="aboutText">Técnico en Sistemas y Desarrollador de Aplicaciones Multiplataforma.</p>
+    </section>
+
+    <section id="estudios" class="contenedor">
+      <h2 data-i18n="studiesTitle">Estudios</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2018 - 2020</div>
+          <div class="timeline-content">
+            <h3>Técnico en Sistemas</h3>
+            <p>Formación técnica en montaje, redes y mantenimiento de equipos informáticos.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 - 2022</div>
+          <div class="timeline-content">
+            <h3>Desarrollo de Aplicaciones Multiplataforma</h3>
+            <p>Especialización en Java, bases de datos, Android Studio y software multiplataforma.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lenguajes" class="contenedor">
+      <h2 data-i18n="languagesTitle">Lenguajes</h2>
+      <ul class="tecnologias tecnologias-animadas">
+        <li>
+          <span class="iconify" data-icon="logos:java" data-width="32" data-height="32"></span>
+          <span>Java</span>
+        </li>
+        <li>
+          <span class="iconify" data-icon="logos:javascript" data-width="32" data-height="32"></span>
+          <span>JavaScript</span>
+        </li>
+        <li>
+          <span class="iconify" data-icon="vscode-icons:file-type-html" data-width="32" data-height="32"></span>
+          <span>HTML</span>
+        </li>
+        <li>
+          <span class="iconify" data-icon="vscode-icons:file-type-css" data-width="32" data-height="32"></span>
+          <span>CSS</span>
+        </li>
+        <li>
+          <span class="iconify" data-icon="logos:mysql" data-width="32" data-height="32"></span>
+          <span>SQL</span>
+        </li>
+        <li>
+          <span class="iconify" data-icon="logos:git-icon" data-width="32" data-height="32"></span>
+          <span>Git</span>
+        </li>
+        <li>
+          <span class="iconify" data-icon="logos:android-icon" data-width="32" data-height="32"></span>
+          <span>Android (Java/Kotlin)</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="proyectos" class="contenedor">
+      <h2 data-i18n="projectsTitle">Proyectos</h2>
+      <div class="grid-proyectos">
+        <article class="card-proyecto">
+          <h3>Calculadora de RM</h3>
+          <p>App Android con sensores y fragmentos para calcular fuerza máxima.</p>
+        </article>
+        <article class="card-proyecto">
+          <h3>Gestor de Pedidos</h3>
+          <p>Sistema web con subinformes y gráficas para gestión empresarial.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tecnologias" class="contenedor">
+      <h2>Tecnologías</h2>
+      <ul class="tecnologias">
+        <li>HTML5/CSS3</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>Android Studio</li>
+        <li>MySQL</li>
+        <li>Git</li>
+        <li>Spring</li>
+      </ul>
+    </section>
+
+    <section id="metodologias" class="contenedor">
+      <h2>Metodologías</h2>
+      <div class="scrum-diagram">
+        <div class="scrum-circle scrum-product">
+          <span class="iconify" data-icon="mdi:lightbulb-on-outline" data-width="32"></span>
+          <div>Product Backlog</div>
+        </div>
+        <div class="scrum-arrow"></div>
+        <div class="scrum-circle scrum-sprint">
+          <span class="iconify" data-icon="mdi:run-fast" data-width="32"></span>
+          <div>Sprint</div>
+        </div>
+        <div class="scrum-arrow"></div>
+        <div class="scrum-circle scrum-board">
+          <span class="iconify" data-icon="mdi:clipboard-list-outline" data-width="32"></span>
+          <div>Sprint Backlog</div>
+        </div>
+        <div class="scrum-arrow"></div>
+        <div class="scrum-circle scrum-daily">
+          <span class="iconify" data-icon="mdi:account-group-outline" data-width="32"></span>
+          <div>Daily Scrum</div>
+        </div>
+        <div class="scrum-arrow"></div>
+        <div class="scrum-circle scrum-increment">
+          <span class="iconify" data-icon="mdi:rocket-launch-outline" data-width="32"></span>
+          <div>Increment</div>
+        </div>
+      </div>
+      <div class="scrum-desc">
+        <span class="iconify" data-icon="mdi:agile" data-width="28"></span>
+        <span>
+          Trabajo habitualmente con la metodología <b>Scrum</b>: iteraciones cortas, reuniones diarias, feedback continuo y entrega incremental.
+        </span>
+      </div>
+    </section>
+
+    <section id="contacto" class="contenedor">
+      <h2 data-i18n="contactTitle">Contacto</h2>
+      <p class="contacto-desc">¿Tienes una idea, proyecto o quieres saludar? ¡Escríbeme!</p>
+      <form id="form-contacto" class="form-minimal" action="https://formspree.io/f/mwpbnjjq" method="POST">
+        <div class="input-icon">
+          <span class="iconify" data-icon="mdi:account" data-width="24" data-height="24"></span>
+          <input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name" minlength="2" maxlength="40" />
+        </div>
+        <div class="input-icon">
+          <span class="iconify" data-icon="mdi:email-outline" data-width="24" data-height="24"></span>
+          <input type="email" name="email" placeholder="Tu correo" required autocomplete="email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" maxlength="60" />
+        </div>
+        <div class="input-icon">
+          <span class="iconify" data-icon="mdi:message-text-outline" data-width="24" data-height="24"></span>
+          <textarea name="mensaje" placeholder="Escribe tu mensaje" required minlength="5" maxlength="500"></textarea>
+        </div>
+        <button type="submit" class="btn-minimal">
+          <span class="iconify" data-icon="mdi:send" data-width="22" data-height="22"></span>
+          Enviar
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2025 Iván - Todos los derechos reservados</p>
+      <div style="margin-top:10px;">
+        <a href="https://github.com/iivaann18" target="_blank" rel="noopener" aria-label="GitHub" style="color:inherit;text-decoration:none;font-size:2rem;">
+          <svg height="1.5em" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-...."/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <button id="scroll-top" aria-label="Volver arriba" title="Volver arriba">↑</button>
+</body>
+</html>
