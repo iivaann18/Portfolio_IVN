@@ -323,11 +323,15 @@ section h2 {
 }
 .timeline-date {
   font-size: 1rem;
-  color: var(--color-primario);
+  color: #111;
   margin-bottom: 4px;
   font-weight: bold;
   margin-left: 18px;
+  transition: color 0.3s;
+  text-shadow: 0 1px 8px #b18bff, 0 0 2px #fff;
 }
+
+/* Detalles del timeline */
 .timeline-content {
   background: var(--color-card);
   border: 1.5px solid var(--color-border);
@@ -335,12 +339,33 @@ section h2 {
   padding: 18px 22px;
   margin-left: 18px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+  color: #6d3faa;
+  text-shadow: 0 1px 8px #b18bff, 0 0 2px #fff;
 }
+
+/* Título del timeline en color primario */
 .timeline-content h3 {
-  margin-bottom: 6px;
-  color: var(--color-primario);
+  color: #6d3faa;
+  text-shadow: 0 1px 8px #b18bff, 0 0 2px #fff;
 }
+
+/* Modo oscuro: fechas y detalles en blanco con sombra */
+body.dark .timeline-date {
+  color: #fff !important;
+  text-shadow: 0 1px 8px #6d3faa, 0 0 2px #000;
+}
+body.dark .timeline-content {
+  color: #fff !important;
+  background: #232046;
+  border-color: #6d3faa;
+  text-shadow: 0 1px 8px #6d3faa, 0 0 2px #000;
+}
+body.dark .timeline-content h3 {
+  color: #c4a5ff !important;
+  text-shadow: 0 1px 8px #6d3faa, 0 0 2px #000;
+}
+
 .timeline-content p {
   margin: 0;
   color: var(--color-text);
@@ -458,11 +483,54 @@ body.dark .code-ambient {
   white-space: normal;
   min-height: 1.5em;
   max-width: 100%;
-  /* Si el texto es largo, reduce el tamaño en pantallas pequeñas */
+  color: var(--color-primario);
+  /* Mejora la legibilidad con sombra */
+  text-shadow: 0 1px 6px rgba(0,0,0,0.13), 0 0 2px #fff;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* En modo oscuro, texto morado y sombra blanca para contraste */
+body.dark .scrum-circle div {
+  color: #c4a5ff;
+  text-shadow: 0 1px 8px #000, 0 0 2px #fff;
+}
+
+/* En hover, texto blanco y sombra morada */
+.scrum-circle:hover div {
+  color: #fff;
+  text-shadow: 0 0 8px #6d3faa, 0 0 2px #fff;
 }
 .scrum-circle .iconify {
   font-size: 2.1rem;
   margin-bottom: 6px;
+  color: var(--color-primario);
+  /* Mejora la visibilidad del icono añadiendo sombra */
+  text-shadow: 0 1px 6px rgba(0,0,0,0.18);
+  /* Fondo circular blanco translúcido y borde para contraste */
+  background: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  padding: 6px;
+  border: 2px solid #6d3faa;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.07);
+  display: inline-block;
+  transition: background 0.3s, border 0.3s, color 0.3s;
+}
+
+/* Iconos de metodologías SIEMPRE visibles en modo oscuro */
+body.dark .scrum-circle .iconify {
+  color: #6d3faa !important; /* Morado para contraste sobre fondo blanco */
+  background: rgba(255,255,255,0.92);
+  border: 2px solid #c4a5ff;
+  text-shadow: 0 0 4px #fff, 0 0 2px #000;
+}
+
+/* Mejora el borde del círculo en modo oscuro para más contraste */
+body.dark .scrum-circle {
+  border-color: #c4a5ff;
 }
 .scrum-circle:nth-child(1) { animation-delay: 0.1s; }
 .scrum-circle:nth-child(3) { animation-delay: 0.3s; }
@@ -474,6 +542,12 @@ body.dark .code-ambient {
   box-shadow: 0 8px 32px rgba(108,99,255,0.13);
   background: var(--color-primario);
   color: #fff;
+}
+.scrum-circle:hover .iconify {
+  color: #fff !important;
+  background: #6d3faa;
+  border: 2px solid #fff;
+  text-shadow: 0 0 8px #fff, 0 0 2px #6d3faa;
 }
 .scrum-arrow {
   width: 36px;
@@ -692,3 +766,5 @@ body.dark nav a {
     margin: 10px;
   }
 }
+
+
