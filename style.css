@@ -28,19 +28,44 @@ body.dark {
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   transition: background 0.3s, color 0.3s;
   line-height: 1.6;
   position: relative;
   z-index: 0;
 }
 
+/* 4. Tipografía profesional */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+section h2 {
+  font-size: 2.1rem;
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--color-primario);
+  display: inline-block;
+  padding-bottom: 7px;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
 /* Contenedor general */
 .contenedor {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-  
+  max-width: 980px;
+  margin: 0 auto 48px auto;
+  padding: 48px 24px;
 }
 
 /* Partículas */
@@ -61,31 +86,36 @@ header, main, footer {
 
 /* Header */
 header {
-  background-color: var(--color-secundario);
+  background: rgba(109, 63, 170, 0.92);
+  box-shadow: 0 8px 32px 0 rgba(109,63,170,0.13);
+  backdrop-filter: blur(7px) saturate(1.2);
+  border-bottom: 1.5px solid #e6dbfa;
   color: var(--color-bg);
   text-align: center;
   padding: 30px 20px;
   position: relative;
   /* Fondo semitransparente para superponer sobre la animación de código */
-  background: rgba(109, 63, 170, 0.92); /* var(--color-secundario) con opacidad */
+  /* background: rgba(109, 63, 170, 0.92); var(--color-secundario) con opacidad */
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-  backdrop-filter: blur(2px);
+}
+
+body.dark header {
+  background: rgba(26, 26, 26, 0.93);
+  box-shadow: 0 8px 32px 0 #23204655;
+  border-bottom: 1.5px solid #2d2542;
+  color: #fff !important;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
 }
 
 header p {
   font-size: 1.2rem;
   margin-top: 5px;
   opacity: 0.85;
-}
-
-/* Fondo semitransparente en modo oscuro */
-body.dark header {
-  background: rgba(26, 26, 26, 0.93); /* var(--color-secundario) dark con opacidad */
-  color: #fff !important;
 }
 
 /* Menú */
@@ -193,20 +223,27 @@ nav a:hover::after {
 }
 
 /* Secciones */
+section {
+  margin-bottom: 48px;
+}
+
 section h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  font-size: 2.1rem;
+  margin-bottom: 18px;
   border-bottom: 2px solid var(--color-primario);
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 7px;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /* Proyectos */
 .grid-proyectos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  gap: 32px;
+  margin-top: 28px;
 }
 
 .card-proyecto {
@@ -214,21 +251,22 @@ section h2 {
   border: 1px solid var(--color-border);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 32px 0 rgba(109,63,170,0.10), 0 1.5px 6px 0 rgba(0,0,0,0.06);
   transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 0;
 }
 
 .card-proyecto:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 36px 0 rgba(109,63,170,0.16), 0 4px 16px 0 rgba(0,0,0,0.10);
 }
 
 /* Tecnologías */
 .tecnologias {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 16px;
+  margin-top: 18px;
 }
 
 .tecnologias li {
@@ -296,8 +334,8 @@ section h2 {
 /* Timeline (diagrama de estudios) */
 .timeline {
   position: relative;
-  margin: 40px 0 20px 0;
-  padding-left: 30px;
+  margin: 48px 0 28px 0;
+  padding-left: 38px;
   border-left: 3px solid var(--color-primario);
 }
 .timeline-item {
@@ -318,7 +356,7 @@ section h2 {
   background: var(--color-primario);
   border-radius: 50%;
   border: 3px solid #fff;
-  box-shadow: 0 2px 8px rgba(108,99,255,0.15);
+  box-shadow: 0 2px 12px rgba(109,63,170,0.18), 0 0 0 4px #f5f3ff;
   z-index: 2;
 }
 .timeline-date {
@@ -538,16 +576,18 @@ body.dark .scrum-circle {
 .scrum-circle:nth-child(7) { animation-delay: 0.7s; }
 .scrum-circle:nth-child(9) { animation-delay: 0.9s; }
 .scrum-circle:hover {
+  /* Solo efecto de escala y glow, sin animación que cambie opacidad ni transform inicial */
   transform: scale(1.08) rotate(-2deg);
-  box-shadow: 0 8px 32px rgba(108,99,255,0.13);
-  background: var(--color-primario);
-  color: #fff;
+  box-shadow: 0 0 0 12px #b18bff33, 0 16px 40px 0 rgba(109,63,170,0.18);
+  opacity: 1 !important;
+  animation: none !important;
+  background: inherit;
+  color: inherit;
 }
-.scrum-circle:hover .iconify {
-  color: #fff !important;
-  background: #6d3faa;
-  border: 2px solid #fff;
-  text-shadow: 0 0 8px #fff, 0 0 2px #6d3faa;
+@keyframes scrumBounceGlow {
+  0% { transform: scale(1.08) rotate(-2deg); box-shadow: 0 0 0 0 #b18bff44, 0 12px 36px 0 rgba(109,63,170,0.16);}
+  50% { transform: scale(1.13) rotate(-2deg); box-shadow: 0 0 0 12px #b18bff33, 0 16px 40px 0 rgba(109,63,170,0.18);}
+  100% { transform: scale(1.08) rotate(-2deg); box-shadow: 0 0 0 6px #b18bff44, 0 12px 36px 0 rgba(109,63,170,0.16);}
 }
 .scrum-arrow {
   width: 36px;
@@ -765,6 +805,120 @@ body.dark nav a {
     position: static;
     margin: 10px;
   }
+}
+
+/* 6. Bordes y esquinas suaves */
+.card-proyecto,
+.timeline-content,
+.scrum-circle,
+.btn-minimal,
+.input-icon,
+.tecnologias li,
+.tecnologias-animadas li {
+  border-radius: 18px !important;
+}
+
+.scrum-circle {
+  border-radius: 50% !important;
+}
+
+input, textarea {
+  border-radius: 8px;
+}
+
+/* 1. Sombras suaves y profundas */
+.card-proyecto,
+.timeline-content,
+.scrum-circle,
+.btn-minimal,
+.input-icon,
+.tecnologias-animadas li {
+  box-shadow: 0 6px 32px 0 rgba(109,63,170,0.10), 0 1.5px 6px 0 rgba(0,0,0,0.06);
+  transition: box-shadow 0.35s cubic-bezier(.4,2,.6,1), transform 0.25s cubic-bezier(.4,2,.6,1);
+}
+
+.card-proyecto:hover,
+.timeline-item:hover .timeline-content,
+.tecnologias-animadas li:hover,
+.btn-minimal:hover,
+.scrum-circle:hover {
+  box-shadow: 0 12px 36px 0 rgba(109,63,170,0.16), 0 4px 16px 0 rgba(0,0,0,0.10);
+}
+
+/* 2. Transiciones y animaciones sutiles */
+a, .btn-minimal, .card-proyecto, .tecnologias-animadas li, .scrum-circle, .timeline-content {
+  transition: 
+    color 0.25s, 
+    background 0.25s, 
+    border 0.25s, 
+    box-shadow 0.35s cubic-bezier(.4,2,.6,1), 
+    transform 0.25s cubic-bezier(.4,2,.6,1);
+}
+
+/* Animación de entrada para secciones */
+section, .timeline, .grid-proyectos, .scrum-diagram {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInSection 0.8s forwards;
+  animation-delay: 0.15s;
+}
+@keyframes fadeInSection {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 9. Iconos con efecto hover */
+.iconify {
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), filter 0.25s;
+}
+.tecnologias-animadas li:hover .iconify,
+.scrum-circle:hover .iconify,
+.scrum-desc .iconify:hover {
+  transform: scale(1.18) rotate(-4deg);
+  filter: drop-shadow(0 0 8px #b18bff);
+}
+
+/* 10. Detalles visuales */
+section:not(:first-child) {
+  border-top: 1.5px solid #e6dbfa;
+  padding-top: 32px;
+}
+
+body.dark section:not(:first-child) {
+  border-top: 1.5px solid #2d2542;
+}
+
+.timeline-dot {
+  box-shadow: 0 2px 12px rgba(109,63,170,0.18), 0 0 0 4px #f5f3ff;
+}
+
+body.dark .timeline-dot {
+  box-shadow: 0 2px 12px #6d3faa44, 0 0 0 4px #232046;
+}
+
+/* Micro-interacción rebote en scrum-circle */
+.scrum-circle {
+  animation: scrumPop 0.7s forwards;
+  will-change: transform;
+  opacity: 1 !important;
+  transform: scale(1) rotate(0deg);
+}
+
+.scrum-circle:hover {
+  /* Solo efecto de escala suave, sin glow ni animación extra */
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 12px 36px 0 rgba(109,63,170,0.16), 0 4px 16px 0 rgba(0,0,0,0.10);
+  opacity: 1 !important;
+  animation: none !important;
+  background: inherit;
+  color: inherit;
+}
+@keyframes scrumBounce {
+  0% { transform: scale(1.08) rotate(-2deg);}
+  50% { transform: scale(1.13) rotate(-2deg);}
+  100% { transform: scale(1.08) rotate(-2deg);}
 }
 
 
