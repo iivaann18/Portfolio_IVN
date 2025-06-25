@@ -1,10 +1,51 @@
 {
   "aboutTitle": "About Me",
-  "aboutText": "Computer Systems Technician and Cross-Platform Application Developer.",
+  "aboutText": "Computer Systems Technician and Cross-Platform Application Developer.\nPassionate about technology, software development and problem solving. Experience in web and mobile projects, databases, APIs and agile methodologies.\nI am proactive, a fast learner and focused on continuous improvement.\nI enjoy teamwork, sharing knowledge and facing new technological challenges.",
   "projectsTitle": "Projects",
   "languagesTitle": "Languages",
   "studiesTitle": "Education",
   "contactTitle": "Contact",
   "headerName": "CodeNull",
-  "headerSubtitle": "Software and Web Developer"
+  "headerSubtitle": "Software and Web Developer",
+
+  "project1Title": "1RM Calculator",
+  "project1Desc": "Android app with sensors and fragments to calculate maximum strength.",
+  "project2Title": "Order Manager",
+  "project2Desc": "Web system with subreports and charts for business management.",
+  "project3Title": "Movie Manager with APIs",
+  "project3Desc": "Web application to search, save and manage favorite movies using external APIs. Includes authentication, advanced filters and a modern, responsive interface.",
+
+  "langSpanish": "Spanish <span style=\"color:#b18bff;font-weight:600;\">Native</span>",
+  "langEnglish": "English <span style=\"color:#b18bff;font-weight:600;\">Advanced</span>",
+  "langGerman": "German <span style=\"color:#b18bff;font-weight:600;\">Basic</span>",
+
+  "timeline1Date": "2018 - 2020",
+  "timeline1Title": "Computer Systems Technician",
+  "timeline1Desc": "Technical training in assembly, networking and computer maintenance.",
+  "timeline2Date": "2020 - 2022",
+  "timeline2Title": "Cross-Platform Application Development",
+  "timeline2Desc": "Specialization in Java, databases, Android Studio and cross-platform software.",
+  "timeline3Date": "Coming soon",
+  "timeline3Title": "Specialization in Artificial Intelligence",
+  "timeline3Desc": "My next goal is to train in AI and machine learning to apply innovative solutions in software development.",
+
+  "scrumProduct": "Product Backlog",
+  "scrumSprint": "Sprint",
+  "scrumBoard": "Sprint Backlog",
+  "scrumDaily": "Daily Scrum",
+  "scrumIncrement": "Increment",
+  "scrumDesc": "I usually work with the <b>Scrum</b> methodology: short iterations, daily meetings, continuous feedback and incremental delivery.",
+
+  "contactDesc": "Do you have an idea, project or just want to say hi? Write me!",
+  "inputNombre": "Your name",
+  "inputEmail": "Your email",
+  "inputMensaje": "Write your message",
+  "btnEnviar": "Send",
+
+  "footerLove": "Made with <span style=\"color:#e040fb;\">&#10084;&#65039;</span> and coffee ☕",
+  "pageTitle": "CodeNull | Software and Web Developer",
+
+  "technologiesTitle": "Technologies",
+  "methodologiesTitle": "Methodologies",
+  "idiomsTitle": "Languages"
 }

@@ -22,16 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   langList.querySelectorAll("li").forEach(li => {
     li.addEventListener("click", () => {
-      loadLang(li.dataset.lang);
+      const lang = li.dataset.lang;
+      loadLang(lang);
       langBtn.innerHTML = li.innerHTML;
       langList.style.display = "none";
+      // Cambia el atributo lang del <html>
+      document.documentElement.lang = lang;
     });
   });
   document.addEventListener("click", e => {
     if (!langBtn.contains(e.target)) langList.style.display = "none";
   });
-  loadLang("es");
-  langBtn.innerHTML = langList.querySelector('[data-lang="es"]').innerHTML;
+  // Carga idioma por defecto
+  const defaultLang = "es";
+  loadLang(defaultLang);
+  langBtn.innerHTML = langList.querySelector(`[data-lang="${defaultLang}"]`).innerHTML;
+  document.documentElement.lang = defaultLang;
 
   // Partículas moradas con tsParticles
   if (window.tsParticles) {
@@ -107,10 +113,146 @@ async function loadLang(lang) {
   try {
     const res = await fetch(`lang/${lang}.json`);
     const data = await res.json();
+    // Cambia todos los textos con data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (data[key]) el.textContent = data[key];
     });
+
+    // Cambia textos estáticos fuera de data-i18n (proyectos, idiomas, etc)
+    // Proyectos
+    const proyectos = [
+      {
+        selector: ".card-proyecto:nth-child(1) h3",
+        key: "project1Title"
+      },
+      {
+        selector: ".card-proyecto:nth-child(1) p",
+        key: "project1Desc"
+      },
+      {
+        selector: ".card-proyecto:nth-child(2) h3",
+        key: "project2Title"
+      },
+      {
+        selector: ".card-proyecto:nth-child(2) p",
+        key: "project2Desc"
+      },
+      {
+        selector: ".card-proyecto:nth-child(3) h3",
+        key: "project3Title"
+      },
+      {
+        selector: ".card-proyecto:nth-child(3) p",
+        key: "project3Desc"
+      }
+    ];
+    proyectos.forEach(p => {
+      const el = document.querySelector(p.selector);
+      if (el && data[p.key]) el.textContent = data[p.key];
+    });
+
+    // Idiomas
+    const idiomas = [
+      {
+        selector: "#idiomas .tecnologias-animadas li:nth-child(1) span:last-child",
+        key: "langSpanish"
+      },
+      {
+        selector: "#idiomas .tecnologias-animadas li:nth-child(2) span:last-child",
+        key: "langEnglish"
+      },
+      {
+        selector: "#idiomas .tecnologias-animadas li:nth-child(3) span:last-child",
+        key: "langGerman"
+      }
+    ];
+    idiomas.forEach(l => {
+      const el = document.querySelector(l.selector);
+      if (el && data[l.key]) el.innerHTML = data[l.key];
+    });
+
+    // Timeline estudios (incluye "Próximamente")
+    const timeline = [
+      {
+        selector: ".timeline-item:nth-child(1) .timeline-date",
+        key: "timeline1Date"
+      },
+      {
+        selector: ".timeline-item:nth-child(1) h3",
+        key: "timeline1Title"
+      },
+      {
+        selector: ".timeline-item:nth-child(1) p",
+        key: "timeline1Desc"
+      },
+      {
+        selector: ".timeline-item:nth-child(2) .timeline-date",
+        key: "timeline2Date"
+      },
+      {
+        selector: ".timeline-item:nth-child(2) h3",
+        key: "timeline2Title"
+      },
+      {
+        selector: ".timeline-item:nth-child(2) p",
+        key: "timeline2Desc"
+      },
+      {
+        selector: ".timeline-item:nth-child(3) .timeline-date",
+        key: "timeline3Date"
+      },
+      {
+        selector: ".timeline-item:nth-child(3) h3",
+        key: "timeline3Title"
+      },
+      {
+        selector: ".timeline-item:nth-child(3) p",
+        key: "timeline3Desc"
+      }
+    ];
+    timeline.forEach(t => {
+      const el = document.querySelector(t.selector);
+      if (el && data[t.key]) el.textContent = data[t.key];
+    });
+
+    // Scrum/metodologías
+    const scrum = [
+      { selector: ".scrum-product div", key: "scrumProduct" },
+      { selector: ".scrum-sprint div", key: "scrumSprint" },
+      { selector: ".scrum-board div", key: "scrumBoard" },
+      { selector: ".scrum-daily div", key: "scrumDaily" },
+      { selector: ".scrum-increment div", key: "scrumIncrement" },
+      { selector: ".scrum-desc span:last-child", key: "scrumDesc" }
+    ];
+    scrum.forEach(s => {
+      const el = document.querySelector(s.selector);
+      if (el && data[s.key]) el.innerHTML = data[s.key];
+    });
+
+    // Contacto descripción
+    const contactoDesc = document.querySelector(".contacto-desc");
+    if (contactoDesc && data.contactDesc) contactoDesc.textContent = data.contactDesc;
+
+    // Footer
+    const footerLove = document.querySelector("footer .footer-love, footer div[style*='font-size:1.05rem']");
+    if (footerLove && data.footerLove) footerLove.innerHTML = data.footerLove;
+
+    // Placeholder inputs contacto
+    const inputNombre = document.querySelector("input[name='nombre']");
+    const inputEmail = document.querySelector("input[name='email']");
+    const inputMensaje = document.querySelector("textarea[name='mensaje']");
+    if (inputNombre && data.inputNombre) inputNombre.placeholder = data.inputNombre;
+    if (inputEmail && data.inputEmail) inputEmail.placeholder = data.inputEmail;
+    if (inputMensaje && data.inputMensaje) inputMensaje.placeholder = data.inputMensaje;
+
+    // Botón enviar
+    const btnEnviar = document.querySelector("button[type='submit'].btn-minimal");
+    if (btnEnviar && data.btnEnviar) btnEnviar.childNodes[1].textContent = data.btnEnviar;
+
+    // Cambia el título de la página
+    if (data.pageTitle) document.title = data.pageTitle;
+
   } catch (err) {
     console.error("No se pudo cargar el idioma:", err);
   }

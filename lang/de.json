@@ -1,10 +1,51 @@
 {
   "aboutTitle": "Über mich",
-  "aboutText": "Fachinformatiker für Systemintegration und Entwickler plattformübergreifender Anwendungen.",
+  "aboutText": "Fachinformatiker für Systemintegration und Entwickler plattformübergreifender Anwendungen.\nLeidenschaft für Technologie, Softwareentwicklung und Problemlösung. Erfahrung mit Web- und Mobilprojekten, Datenbanken, APIs und agilen Methoden.\nIch bin proaktiv, lernfähig und strebe nach kontinuierlicher Verbesserung.\nIch arbeite gerne im Team, teile Wissen und stelle mich neuen technologischen Herausforderungen.",
   "projectsTitle": "Projekte",
   "languagesTitle": "Sprachen",
   "studiesTitle": "Ausbildung",
   "contactTitle": "Kontakt",
   "headerName": "CodeNull",
-  "headerSubtitle": "Software- und Webentwickler"
+  "headerSubtitle": "Software- und Webentwickler",
+
+  "project1Title": "1RM Rechner",
+  "project1Desc": "Android-App mit Sensoren und Fragmenten zur Berechnung der Maximalkraft.",
+  "project2Title": "Bestellmanager",
+  "project2Desc": "Websystem mit Teilberichten und Diagrammen für das Unternehmensmanagement.",
+  "project3Title": "Filme-Manager mit APIs",
+  "project3Desc": "Webanwendung zum Suchen, Speichern und Verwalten von Lieblingsfilmen über externe APIs. Enthält Authentifizierung, erweiterte Filter und eine moderne, responsive Oberfläche.",
+
+  "langSpanish": "Spanisch <span style=\"color:#b18bff;font-weight:600;\">Muttersprache</span>",
+  "langEnglish": "Englisch <span style=\"color:#b18bff;font-weight:600;\">Fortgeschritten</span>",
+  "langGerman": "Deutsch <span style=\"color:#b18bff;font-weight:600;\">Grundkenntnisse</span>",
+
+  "timeline1Date": "2018 - 2020",
+  "timeline1Title": "Fachinformatiker für Systemintegration",
+  "timeline1Desc": "Technische Ausbildung in Montage, Netzwerken und Wartung von Computersystemen.",
+  "timeline2Date": "2020 - 2022",
+  "timeline2Title": "Entwicklung plattformübergreifender Anwendungen",
+  "timeline2Desc": "Spezialisierung auf Java, Datenbanken, Android Studio und plattformübergreifende Software.",
+  "timeline3Date": "Demnächst",
+  "timeline3Title": "Spezialisierung auf Künstliche Intelligenz",
+  "timeline3Desc": "Mein nächstes Ziel ist es, mich in KI und maschinellem Lernen weiterzubilden, um innovative Lösungen in der Softwareentwicklung anzuwenden.",
+
+  "scrumProduct": "Product Backlog",
+  "scrumSprint": "Sprint",
+  "scrumBoard": "Sprint Backlog",
+  "scrumDaily": "Daily Scrum",
+  "scrumIncrement": "Increment",
+  "scrumDesc": "Ich arbeite häufig mit der <b>Scrum</b>-Methode: kurze Iterationen, tägliche Meetings, kontinuierliches Feedback und inkrementelle Lieferung.",
+
+  "contactDesc": "Hast du eine Idee, ein Projekt oder möchtest einfach Hallo sagen? Schreib mir!",
+  "inputNombre": "Dein Name",
+  "inputEmail": "Deine E-Mail",
+  "inputMensaje": "Schreibe deine Nachricht",
+  "btnEnviar": "Senden",
+
+  "footerLove": "Gemacht mit <span style=\"color:#e040fb;\">&#10084;&#65039;</span> und Kaffee ☕",
+  "pageTitle": "CodeNull | Software- und Webentwickler",
+
+  "technologiesTitle": "Technologien",
+  "methodologiesTitle": "Methoden",
+  "idiomsTitle": "Sprachen"
 }
