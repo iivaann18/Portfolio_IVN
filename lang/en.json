@@ -5,7 +5,7 @@
   "languagesTitle": "Languages",
   "studiesTitle": "Education",
   "contactTitle": "Contact",
-  "headerName": "CodeNull",
+  "headerName": "Ivan Perez Esteban",
   "headerSubtitle": "Software and Web Developer",
 
   "project1Title": "1RM Calculator",
@@ -16,8 +16,8 @@
   "project3Desc": "Web application to search, save and manage favorite movies using external APIs. Includes authentication, advanced filters and a modern, responsive interface.",
 
   "langSpanish": "Spanish <span style=\"color:#b18bff;font-weight:600;\">Native</span>",
-  "langEnglish": "English <span style=\"color:#b18bff;font-weight:600;\">Advanced</span>",
-  "langGerman": "German <span style=\"color:#b18bff;font-weight:600;\">Basic</span>",
+  "langEnglish": "English <span style=\"color:#b18bff;font-weight:600;\">Intermediate</span>",
+  "langGerman": "German <span style=\"color:#b18bff;font-weight:600;\">Basic knowledge</span>",
 
   "timeline1Date": "2018 - 2020",
   "timeline1Title": "Computer Systems Technician",
@@ -43,7 +43,7 @@
   "btnEnviar": "Send",
 
   "footerLove": "Made with <span style=\"color:#e040fb;\">&#10084;&#65039;</span> and coffee ☕",
-  "pageTitle": "CodeNull | Software and Web Developer",
+  "pageTitle": "Ivan Perez Esteban | Software and Web Developer",
 
   "technologiesTitle": "Technologies",
   "methodologiesTitle": "Methodologies",

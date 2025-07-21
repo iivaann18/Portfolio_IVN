@@ -5,7 +5,7 @@
   "languagesTitle": "Sprachen",
   "studiesTitle": "Ausbildung",
   "contactTitle": "Kontakt",
-  "headerName": "CodeNull",
+  "headerName": "Ivan Perez Esteban",
   "headerSubtitle": "Software- und Webentwickler",
 
   "project1Title": "1RM Rechner",
@@ -16,7 +16,7 @@
   "project3Desc": "Webanwendung zum Suchen, Speichern und Verwalten von Lieblingsfilmen über externe APIs. Enthält Authentifizierung, erweiterte Filter und eine moderne, responsive Oberfläche.",
 
   "langSpanish": "Spanisch <span style=\"color:#b18bff;font-weight:600;\">Muttersprache</span>",
-  "langEnglish": "Englisch <span style=\"color:#b18bff;font-weight:600;\">Fortgeschritten</span>",
+  "langEnglish": "Englisch <span style=\"color:#b18bff;font-weight:600;\">Mittelstufe</span>",
   "langGerman": "Deutsch <span style=\"color:#b18bff;font-weight:600;\">Grundkenntnisse</span>",
 
   "timeline1Date": "2018 - 2020",
@@ -43,7 +43,7 @@
   "btnEnviar": "Senden",
 
   "footerLove": "Gemacht mit <span style=\"color:#e040fb;\">&#10084;&#65039;</span> und Kaffee ☕",
-  "pageTitle": "CodeNull | Software- und Webentwickler",
+  "pageTitle": "Ivan Perez Esteban | Software- und Webentwickler",
 
   "technologiesTitle": "Technologien",
   "methodologiesTitle": "Methoden",
